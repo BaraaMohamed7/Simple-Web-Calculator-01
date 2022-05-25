@@ -1,0 +1,113 @@
+@import url(//db.onlinewebfonts.com/c/dffb2b80813d195d26fa4d2aad48b059?family=Gotham+Rounded);
+* {
+	box-sizing: border-box;
+	font-family: "gotham rounded", sans-serif;
+	font-weight: bold;
+	transition: all 0.4s;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.page {
+	background-color: #222;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calculator {
+	padding: 30px;
+	border-radius: 30px;
+	background-color: #111;
+	display: grid;
+	gap: 15px;
+	grid-template-columns: repeat(4, 70px);
+	grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	justify-items: center;
+}
+.calculator .output {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	flex-direction: column;
+	background-color: #444;
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	padding: 20px;
+	letter-spacing: 1px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.calculator .output .previous-operand {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 18px;
+}
+.calculator .output .current-operand {
+	color: white;
+	font-size: 25px;
+}
+.btn {
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 1.8rem;
+	cursor: pointer;
+	border: none;
+	background-color: #333;
+	color: #aaa;
+	width: 100%;
+	height: 100%;
+}
+.btn:hover {
+	transform: scale(1.15);
+}
+.span-two {
+	grid-column: span 2;
+}
+.calculator .all-clear {
+	background-color: orangered;
+	color: white;
+}
+.calculator .get-result {
+	background-color: orange;
+	color: #fff;
+}
+.delete {
+	background-color: #fff;
+	color: #000;
+}
+.theme-change-btn {
+	width: fit-content;
+	height: fit-content;
+	padding: 15px;
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	font-size: 0.5em;
+}
+.copyrights {
+	position: fixed;
+	left: 40px;
+	bottom: 30px; 
+	color: white;
+font-weight: normal;
+}
+@media (max-width: 767px) {
+	.calculator {
+		grid-template-columns: repeat(4, 60px);
+		grid-template-rows: minmax(100px, auto) repeat(5, 60px);
+	}
+	.btn {
+		font-size: 1.4rem;
+	}
+	.theme-change-btn {
+		font-size: 0.8rem;
+		top: 10px;
+	}
+}
