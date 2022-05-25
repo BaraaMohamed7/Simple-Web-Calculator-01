@@ -2,9 +2,9 @@ const theme = document.getElementById("theme");
 const themeChangeBtn = document.getElementById("themeChangeBtn");
 themeChangeBtn.onclick = function changeTheme() {
 	if (theme.getAttribute("href") == "/styles/dark-theme.css") {
-		theme.setAttribute("href", `/styles/light-theme.css`);
+		theme.setAttribute("href", `../styles/light-theme.css`);
 	} else {
-		theme.setAttribute("href", `/styles/dark-theme.css`);
+		theme.setAttribute("href", `../styles/dark-theme.css`);
 	}
 };
 
